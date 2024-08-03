@@ -6,14 +6,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import "./tailwind.css";
-import PocketBase from "pocketbase";
-
-const pb = new PocketBase("https://free-pos-backend.fly.dev:8090");
 
 export function Layout({ children }: { children: React.ReactNode }) {
-  pb.health.check().then((res) => {
-    console.log(res);
-  });
   return (
     <html lang="en">
       <head>
