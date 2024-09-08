@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { AppBar, Typography } from "@mui/material";
 import type { MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => {
@@ -10,8 +10,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <Typography variant="h1" align="center">
-      Welcome to Remix!
-    </Typography>
+    <AppBar position="static">
+      <Typography variant="h6" className="tw-text-rose-200">
+        Welcome to Remix!
+      </Typography>
+    </AppBar>
   );
 }
